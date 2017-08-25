@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false;">
+<head>
+  <meta charset="utf-8">
+  <title>Movie</title>
+  <link href="/static/css/video.css" rel="stylesheet" type="text/css">
+  <link href="http://vjs.zencdn.net/5.17.0/video-js.css" rel="stylesheet">
+   <!--If you'd like to support IE8-->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+  <link href="/static/css/video.css" rel="stylesheet" type="text/css">
+  <link href="/static/images/supersmallsymbol.png" rel="shortcut icon" type="image/x-icon">
+  <link href="/static/images/supersymbol.png" rel="apple-touch-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <video class="video-js vjs-default-skin" controls autoplay data-setup="{}" id="super-video">
+            <source src="/static/video/{{ title }}.mp4">
+            <p class="vjs-no-js">Enale Javascript</p>
+        </video>
+    </div>
+
+    <script src="http://vjs.zencdn.net/5.17.0/video.js"></script>
+    <script src="/static/js/video.js"></script>
+    <script src="//cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
+</body>
+</html>

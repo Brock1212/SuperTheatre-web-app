@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{{ url_for('handle_charge') }}" method="post">
+    <article>
+      <label>
+        <span>Amount is $5.00</span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="Get Out"
+            data-amount="800"
+            data-locale="auto"
+            data-image="/static/images/supersymbol.png"
+            data-name="Super Theatre"></script>
+    </form>
+  <h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+</body>
+</html>

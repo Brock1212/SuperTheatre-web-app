@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Tue Feb 28 2017 09:25:21 GMT+0000 (UTC)  -->
+<html data-wf-page="5757627e61112bf3445ba262" data-wf-site="5757627e61112bf3445ba261">
+<head>
+  <meta charset="utf-8">
+  <title>SuperTheatre</title>
+  <meta content="Watch movies currently in theaters streamed directly to your computer. Pay and watch within a matter of seconds1" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="/static/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/supertheatre.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Bitter:400,700,400italic"]
+      }
+    });
+  </script>
+  <script src="/static/js/modernizr.js" type="text/javascript"></script>
+  <link href="/static/images/supersmallsymbol.png" rel="shortcut icon" type="image/x-icon">
+  <link href="/static/images/supersymbol.png" rel="apple-touch-icon">
+</head>
+<body class="home-body">
+  <div class="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+    <div class="container w-container">
+      <a class="logo w-nav-brand" href={{ url_for("supertheatre") }}><img class="logoimage" src="/static/images/superlogo.png" width="316">
+      </a>
+      <a class="_1 navlink w-inline-block" href="#hometheatre">
+        <div class="homellinktext">Prime Theatre</div>
+      </a>
+      <a class="_1 navlink w-inline-block" href="#onemovie">
+        <div class="homellinktext">$1 Movie</div>
+      </a>
+      <nav class="dropdown w-nav-menu" role="navigation">
+        <a class="_1 navlink w-nav-link" href="#"></a><a class="navlink w-nav-link" href={{ url_for("comingsoonpage") }}>Coming Sooon</a>
+          {% if g.user %}
+              <a class="navlink w-nav-link" href={{ url_for("manageaccountpage") }}>{{ g.user.username }}'s Account</a>
+          {% else %}
+              <a class="navlink w-nav-link" href={{ url_for("loginpage") }}>Login/Create Account</a>
+          {% endif %}
+      </nav>
+      <div class="menubuttonn w-nav-button">
+        <div class="menuicon w-icon-nav-menu"></div>
+      </div>
+      <a class="navlink w-inline-block" href="#limitedrelease">
+        <div class="homellinktext">Foreign Films</div>
+      </a>
+    </div>
+  </div>
+  <div class="summary">
+    <h1 class="sectionheading summarytitle">Welcome to Super Theatre, your virtual cinema.</h1>
+    <div class="listholder w-container">
+      <ul class="quickinfolist">
+        <li class="quickinfolistitem">
+          <h2 class="quickinfotext">Watch all of the latest films from around the globe.</h2>
+        </li>
+        <li class="quickinfolistitem">
+          <h2 class="quickinfotext">Create account to save your card information for fast access.</h2>
+        </li>
+        <li class="quickinfolistitem">
+          <h2 class="quickinfotext">On a budget? Check out our $1 movie options.</h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="homenavselection" id="hometheatre">
+    <h1 class="sectionheading">&nbsp; &nbsp; Prime Theatre <span class="highlight">$8.00</span></h1>
+    <div class="movieslider slider w-slider" data-animation="outin" data-duration="400" data-infinite="1" data-ix="shownav">
+      <div class="moviemask w-slider-mask">
+          {% for movie in prime %}
+        <div class="_5example linkex movieslide w-slide" data-ix="showinfo">
+          <a class="movielink w-inline-block" href={{ url_for("moviepage", title = movie.title) }}>
+            <div class="movieinfoholder">
+              <div class="imageholder"><img class="movieposter" height="100%" src="/static/images/{{ movie.title }}/{{ movie.title }}main.jpg">
+              </div>
+              <div class="movieinfo w-richtext" data-ix="hide">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.info }}</p>
+              </div>
+            </div>
+          </a>
+          <div class="movieinfo w-richtext" data-ix="hide">
+            <h2>What’s a Rich Text element?</h2>
+            <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+          </div>
+        </div>
+          {% endfor %}
+      {% for movie in prime[:primecount] %}
+      <div class="_5example linkex movieslide w-slide" data-ix="showinfo">
+          <a class="movielink w-inline-block" href={{ url_for("moviepage", title = movie.title) }}>
+            <div class="movieinfoholder">
+              <div class="imageholder"><img class="movieposter" height="100%" src="/static/images/{{ movie.title }}/{{ movie.title }}main.jpg">
+              </div>
+              <div class="movieinfo w-richtext" data-ix="hide">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.info }}</p>
+              </div>
+            </div>
+          </a>
+          <div class="movieinfo w-richtext" data-ix="hide">
+            <h2>What’s a Rich Text element?</h2>
+            <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <div class="heroarrow w-slider-arrow-left">
+        <div class="icon w-icon-slider-left"></div>
+      </div>
+      <div class="heroarrow w-slider-arrow-right">
+        <div class="icon w-icon-slider-right"></div>
+      </div>
+      <div class="bottomnav w-slider-nav"></div>
+    </div>
+  </div>
+  <div class="homenavselection" id="onemovie">
+    <h1 class="sectionheading">&nbsp; &nbsp; Dollar Movies <span class="highlight">$1.00</span></h1>
+    <div class="movieslider slider w-slider" data-animation="outin" data-duration="400" data-infinite="1">
+      <div class="moviemask w-slider-mask">
+        {% for movie in dollar %}
+        <div class="_5example linkex movieslide w-slide" data-ix="showinfo">
+          <a class="movielink w-inline-block" href={{ url_for("moviepage", title = movie.title) }}>
+            <div class="movieinfoholder">
+              <div class="imageholder"><img class="movieposter" height="100%" src="/static/images/{{ movie.title }}/{{ movie.title }}main.jpg">
+              </div>
+              <div class="movieinfo w-richtext" data-ix="hide">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.info }}</p>
+              </div>
+            </div>
+          </a>
+          <div class="movieinfo w-richtext" data-ix="hide">
+            <h2>What’s a Rich Text element?</h2>
+            <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+          </div>
+        </div>
+          {% endfor %}
+      {% for movie in dollar[:dollarcount] %}
+      <div class="_5example linkex movieslide w-slide" data-ix="showinfo">
+          <a class="movielink w-inline-block" href={{ url_for("moviepage", title = movie.title) }}>
+            <div class="movieinfoholder">
+              <div class="imageholder"><img class="movieposter" height="100%" src="/static/images/{{ movie.title }}/{{ movie.title }}main.jpg">
+              </div>
+              <div class="movieinfo w-richtext" data-ix="hide">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.info }}</p>
+              </div>
+            </div>
+          </a>
+          <div class="movieinfo w-richtext" data-ix="hide">
+            <h2>What’s a Rich Text element?</h2>
+            <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <div class="heroarrow w-slider-arrow-left">
+        <div class="icon w-icon-slider-left"></div>
+      </div>
+      <div class="heroarrow w-slider-arrow-right">
+        <div class="icon w-icon-slider-right"></div>
+      </div>
+      <div class="bottomnav w-slider-nav"></div>
+    </div>
+  </div>
+  <div class="homenavselection" id="limitedrelease">
+    <h1 class="sectionheading">&nbsp; &nbsp; Foreign Films <span class="highlight">$6.00</span></h1>
+    <div class="movieslider slider w-slider" data-animation="outin" data-duration="400" data-infinite="1">
+      <div class="moviemask w-slider-mask">
+       {% for movie in foreign %}
+        <div class="_5example linkex movieslide w-slide" data-ix="showinfo">
+          <a class="movielink w-inline-block" href={{ url_for("moviepage", title = movie.title) }}>
+            <div class="movieinfoholder">
+              <div class="imageholder"><img class="movieposter" height="100%" src="/static/images/{{ movie.title }}/{{ movie.title }}main.jpg">
+              </div>
+              <div class="movieinfo w-richtext" data-ix="hide">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.info }}</p>
+              </div>
+            </div>
+          </a>
+          <div class="movieinfo w-richtext" data-ix="hide">
+            <h2>What’s a Rich Text element?</h2>
+            <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+          </div>
+        </div>
+          {% endfor %}
+      {% for movie in foreign[:foreigncount] %}
+      <div class="_5example linkex movieslide w-slide" data-ix="showinfo">
+          <a class="movielink w-inline-block" href={{ url_for("moviepage", title = movie.title) }}>
+            <div class="movieinfoholder">
+              <div class="imageholder"><img class="movieposter" height="100%" src="/static/images/{{ movie.title }}/{{ movie.title }}main.jpg">
+              </div>
+              <div class="movieinfo w-richtext" data-ix="hide">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.info }}</p>
+              </div>
+            </div>
+          </a>
+          <div class="movieinfo w-richtext" data-ix="hide">
+            <h2>What’s a Rich Text element?</h2>
+            <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <div class="heroarrow w-slider-arrow-left">
+        <div class="icon w-icon-slider-left"></div>
+      </div>
+      <div class="heroarrow w-slider-arrow-right">
+        <div class="icon w-icon-slider-right"></div>
+      </div>
+      <div class="bottomnav w-slider-nav"></div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="/static/js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>

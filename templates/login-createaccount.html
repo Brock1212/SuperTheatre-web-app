@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Tue Feb 28 2017 09:25:21 GMT+0000 (UTC)  -->
+<html data-wf-page="5774a992e1b1c78e226eb0fe" data-wf-site="5757627e61112bf3445ba261">
+<head>
+  <meta charset="utf-8">
+  <title>Login createaccount</title>
+  <meta content="Create an account with SuperTheatre Today!" name="description">
+  <meta content="Login createaccount" property="og:title">
+  <meta content="Create an account with SuperTheatre Today!" property="og:description">
+  <meta content="summary" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="/static/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/supertheatre.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Bitter:400,700,400italic"]
+      }
+    });
+  </script>
+  <script src="/static/js/modernizr.js" type="text/javascript"></script>
+  <link href="/static/images/supersmallsymbol.png.png" rel="shortcut icon" type="image/x-icon">
+  <link href="/static/images/supersymbol.png.png" rel="apple-touch-icon">
+</head>
+<body class="home-body loginbody">
+  <div class="loginnav nav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+    <div class="container w-container">
+      <a class="logo w-nav-brand" href={{ url_for("supertheatre") }}><img class="logoimage" src="/static/images/superlogo.png" width="316">
+      </a>
+      <nav class="dropdown w-nav-menu" role="navigation">
+        <a class="navlink w-nav-link" href="#"></a><a class="navlink w-nav-link" href={{ url_for("comingsoonpage") }}>Coming Sooon</a><a class="navlink w-nav-link" href="{{ url_for("supertheatre")}}" >Back To&nbsp;Theatre</a>
+      </nav>
+      <div class="menubuttonn w-nav-button">
+        <div class="menuicon w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <div class="loginsection">
+    <h1 class="logintitle">Login</h1>
+    {% if state == 'bad_login' %}
+        <p class="loginpageerror">Wrong username or password</p>
+    {% elif state == 'email_sent' %}
+        <p class="loginpagesuccess">An email was sent to your email adress</p>
+    {% elif state == 'wrong_email' %}
+        <p class="loginpageerror">The wrong email was entered</p>
+    {% endif %}
+    <div class="w-form">
+      <form class="loginform" data-name="Login Form" id="wf-form-Login-Form" name="wf-form-Login-Form" action="{{ url_for('handlelogin', link ="supertheatre") }}" method="POST">
+        <label class="loginpagefieldname" for="username">Username or Email:</label>
+        <input class="textfieldlogin w-input" data-name="username" id="username" maxlength="256" name="username" type="text">
+        <label class="loginpagefieldname" for="password">Password:</label>
+        <input class="textfieldlogin w-input" data-name="password" id="password" maxlength="256" name="password" type="password">
+        <input class="submitbutton w-button" data-wait="Please wait..." type="submit" value="Login" name="submit">
+        <label class="forgot hint loginpage" data-ix="show-password-retreival" for="username-2">Forgot Password?</label>
+        <label class="loginpagefieldname" data-ix="hide" for="retreival">Enter Email for password retreival:</label>
+        <input class="textfieldlogin w-input" data-ix="hide" data-name="retreival" id="retreival" maxlength="256" name="retreival" type="email">
+        <input class="submitbutton w-button" data-ix="hide" data-wait="Please wait..." type="submit" value="Retreive" name="submit">
+      </form>
+    </div>
+    <h1 class="logintitle">Create Account</h1>
+    <div class="w-form">
+      <form class="loginform w-clearfix" data-name="Login Form" id="wf-form-Login-Form" name="wf-form-Login-Form" action="{{ url_for('create_user') }}" method="POST">
+        <label class="hint loginpage" for="username-2">Select this option to create an account and save your info. This way you don't have to constantly enter your credit card information when you want to watch a movie!</label>
+        <label class="loginpagefieldname" for="email">Email:</label>
+        <input class="textfieldlogin w-input" data-name="email" id="email" maxlength="256" name="email" type="email">
+        <label class="loginpagefieldname" for="createusername">Username:</label>
+        <input class="textfieldlogin w-input" data-name="createusername" id="createusername" maxlength="256" name="createusername" type="text">
+        <label class="loginpagefieldname" for="createpassword">Password:</label>
+        <input class="textfieldlogin w-input" data-name="createpassword" id="createpassword" maxlength="256" name="createpassword" type="password">
+        <label class="loginpagefieldname" for="Createpasswordcheck">Confirm Password:</label>
+        <input class="textfieldlogin w-input" data-name="Createpasswordcheck" id="Createpasswordcheck" maxlength="256" name="Createpasswordcheck" type="password">
+        <label class="loginpagefieldname" for="cardnumber">Card Number:</label>
+        <input class="textfieldlogin w-input" data-name="cardnumber" id="cardnumber" maxlength="256" name="cardnumber" type="text">
+        <label class="loginpagefieldname" for="nameoncard">Name on card:</label>
+        <input class="textfieldlogin w-input" data-name="nameoncard" id="nameoncard" maxlength="256" name="nameoncard" type="text">
+        <label class="left loginpagefieldname small" for="expiration">Expir date:</label>
+        <input class="left smalltxtfield w-input" data-name="expiration" id="expiration" maxlength="256" name="expiration" placeholder="MMYY" type="text">
+        <label class="loginpagefieldname right small" for="CVC">CVC:</label>
+        <input class="smalltxtfield w-input" data-name="CVC" id="CVC" maxlength="256" name="CVC" type="text">
+        <input class="submitbutton w-button" data-wait="Please wait..." type="submit" value="Create Account">
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="/static/js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>
