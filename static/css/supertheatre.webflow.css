@@ -1,0 +1,1803 @@
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.loginpageerror{
+  color: red;
+  text-align: center;
+  margin-top: 4vh;
+  font-size: 2vh;
+}
+
+.loginpagesuccess{
+  color: green;
+  text-align: center;
+  margin-top: 4vh;
+  font-size: 2vh;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.navlink {
+  display: inline-block;
+  overflow: hidden;
+  height: 7.5vh;
+  max-height: 7.5vh;
+  margin-right: 0px;
+  padding: 2.4vh 2vh 2vh 0px;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 2vh;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  color: gold;
+}
+
+.navlink.w--current {
+  color: gold;
+}
+
+.navlink._1 {
+  height: 7.5vh;
+}
+
+.container {
+  height: 7.5vh;
+  max-height: 7.5vh;
+  max-width: none;
+  font-size: 1.4vh;
+  line-height: 2vh;
+  text-align: center;
+}
+
+.homellinktext {
+  display: inline-block;
+  padding-top: 2px;
+  border-color: #000;
+  font-family: Bitter, serif;
+  font-size: 2vh;
+  line-height: 2vh;
+}
+
+.homellinktext:hover {
+  color: gold;
+}
+
+.home-body {
+  margin-bottom: 3.3vh;
+  padding-top: 4.5vh;
+  background-color: #000;
+  font-size: 1.4vh;
+  line-height: 2vh;
+  cursor: default;
+}
+
+.home-body.moviebody {
+  overflow: hidden;
+  margin-bottom: 0px;
+  padding-top: 7.5vh;
+}
+
+.home-body.loginbody {
+  display: block;
+  margin-bottom: 10vh;
+  margin-top: 2vh;
+  background-color: #000;
+}
+
+.nav {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 7.5vh;
+  max-height: 7.5vh;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .65));
+  color: transparent;
+}
+
+.nav.moviepage {
+  height: 7.5vh;
+}
+
+.homenavselection {
+  height: 100vh;
+  max-height: 100vh;
+  margin-top: 5vh;
+  background-color: transparent;
+  color: #303030;
+}
+
+.slider {
+  height: 80vh;
+  margin-top: 30px;
+}
+
+.slider.movieslider {
+  display: block;
+  height: 80vh;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.newsslide {
+  overflow: hidden;
+}
+
+.newsslideheading {
+  display: block;
+  margin-top: 603px;
+  margin-left: 126px;
+  padding-left: 0px;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 44px;
+}
+
+.movieslide {
+  overflow: hidden;
+  width: 25%;
+  margin-right: 4px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  background-color: #8a2be2;
+  background-image: url('../images/volvo_senf4.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.movieslide:hover {
+  width: 25%;
+  height: 100%;
+}
+
+.movieslide._5example {
+  width: 20%;
+  background-image: url('../images/example-poster.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.movieslide._5example.linkex {
+  position: static;
+  display: inline-block;
+  overflow: hidden;
+  background-color: #000;
+  background-image: none;
+  cursor: pointer;
+}
+
+.sectionheading {
+  width: auto;
+  height: 7vh;
+  max-height: 7vh;
+  margin-top: 0.2vh;
+  margin-bottom: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #fff;
+  font-size: 5vh;
+  line-height: 4.4vh;
+  text-align: left;
+}
+
+.sectionheading.summary {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sectionheading.summarytitle {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.moviemask {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.movielink {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  padding-left: 0px;
+  color: gold;
+  cursor: pointer;
+}
+
+.movielink.w--current {
+  width: 100%;
+  height: 80vh;
+  background-image: url('../images/example-poster.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.herolink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bottomnav {
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .61), rgba(0, 0, 0, .61));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .61), rgba(0, 0, 0, .61));
+  color: gold;
+  font-size: 17px;
+  text-transform: none;
+}
+
+.movieinfo {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  padding-top: 40vh;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8));
+  color: #fff;
+  cursor: pointer;
+}
+
+.movieinfo h2 {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  font-family: Bitter, serif;
+  font-size: 3.2vh;
+  line-height: 3.6vh;
+  text-align: center;
+}
+
+.movieinfo p {
+  margin-bottom: 1vh;
+  font-size: 2.5vh;
+  line-height: 2.2vh;
+}
+
+.movieinfoholder {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.heroarrow {
+  display: block;
+  width: 4vw;
+  color: #fff;
+}
+
+.heroarrow:hover {
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  color: gold;
+}
+
+.heroarrow.hero {
+  width: 4vw;
+}
+
+.info {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.info:hover {
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
+.movieoptions {
+  height: 92vh;
+}
+
+.infocolumn {
+  height: 93vh;
+  padding-right: 0px;
+  padding-left: 0px;
+  cursor: pointer;
+}
+
+.tomoviecolumn {
+  height: 93vh;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.trailercolumn {
+  height: 93vh;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.tomovielink {
+  width: 63%;
+  height: 75%;
+}
+
+.trailers {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.tomovie {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.addoverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  padding-left: 0px;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .77), rgba(0, 0, 0, .77));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .77), rgba(0, 0, 0, .77));
+}
+
+.addoverlay.infosectionheading {
+  display: block;
+  margin-bottom: 0px;
+  padding-top: 75vh;
+  padding-left: 20vh;
+  font-family: Bitter, serif;
+}
+
+.addoverlay.trailersectionheading {
+  display: block;
+  padding-top: 75vh;
+  padding-left: 10vh;
+  cursor: pointer;
+}
+
+.addoverlay.tomovieheading {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  padding-top: 36vh;
+  padding-bottom: 18vh;
+  padding-left: 35%;
+  cursor: pointer;
+}
+
+.infoheading {
+  position: absolute;
+  padding-top: 0px;
+  padding-left: 0px;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 6vh;
+}
+
+.trailerheading {
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 6vh;
+}
+
+.tomovieheading {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin-top: 4vh;
+  margin-bottom: 0px;
+  padding-bottom: 27vh;
+  padding-left: 20%;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 6vh;
+}
+
+.movieinfoexpansion {
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+  width: 66.7%;
+  height: 93vh;
+  margin-left: 33vw;
+  background-color: #000;
+  color: #303030;
+}
+
+.movieinfotext {
+  position: static;
+  height: 90%;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding: 2.3vh 0px 1.5vh;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.movieinfotext h2 {
+  margin: 2vh 0px 1vh;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  background-color: #000;
+  font-family: Bitter, serif;
+  color: gold;
+  font-size: 4vh;
+  text-align: center;
+}
+
+.movieinfotext p {
+  margin-bottom: 1vh;
+  margin-left: 0px;
+  padding-right: 6vw;
+  padding-left: 6vw;
+  color: #000;
+  font-size: 2.3vh;
+  line-height: 2vh;
+  text-align: left;
+}
+
+.previewsexpansion {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  width: 66.7%;
+  height: 93vh;
+  padding-left: 0px;
+  background-color: #000;
+}
+
+.closebutton {
+  position: absolute;
+  background-color: transparent;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 6vh;
+}
+
+.title {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  padding-top: 0.6vh;
+  padding-bottom: 0.5vh;
+  background-color: transparent;
+  font-family: Bitter, serif;
+  color: gold;
+  font-size: 6vh;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.playbutton {
+  margin-bottom: 2vh;
+  padding-top: 0px;
+  padding-left: 0px;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.playbutton:hover {
+  background-color: transparent;
+  opacity: 1;
+  color: #fff;
+  text-decoration: none;
+}
+
+.preview {
+  width: 25%;
+  margin-bottom: 0px;
+  padding: 20px 30px 0px;
+}
+
+.movie-title {
+  display: inline-block;
+  width: auto;
+  margin: 2.4vh auto 2vh;
+  padding-left: 0px;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 4vh;
+  text-align: center;
+}
+
+.quickloginoption {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  display: block;
+  width: 120%;
+  height: auto;
+  margin-top: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0%;
+  padding-left: 0px;
+}
+
+.quicklogin {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1.5vh;
+  border: 5px solid gold;
+  border-radius: 25px;
+  background-color: #000;
+}
+
+.field {
+  height: 4.5vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding-top: 1vh;
+  background-color: gold;
+  font-family: Bitter, serif;
+  color: #000;
+  font-size: 4vh;
+  text-align: center;
+
+}
+
+.field.card {
+  height: 3vh;
+  margin-top: 0.9vh;
+  padding-top: 0vh;
+  background-color: transparent;
+  color: #fff;
+  font-size: 4vh;
+}
+
+.quickform {
+  position: absolute;
+  display: block;
+  height: auto;
+  padding-right: 2.5vh;
+  padding-left: 2.3vh;
+}
+
+.submitbutton {
+  position: static;
+  display: block;
+  width: 50%;
+  height: 5.5vh;
+  margin-top: 1.3vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.3vh 1.5vw 18px 1.7vw;
+  border: 1px solid gold;
+  border-radius: 10px;
+  background-color: #000;
+  color: gold;
+  font-size: 3.8vh;
+  cursor: pointer;
+}
+
+.submitbutton:hover {
+  background-color: #ff0;
+  color: #000;
+}
+
+.textfield {
+  height: 3.5vh;
+  margin-top: 0px;
+  margin-bottom: 1.7vh;
+  padding-top: 1.8vh;
+  padding-bottom: 1.8vh;
+  color: #000;
+  font-size: 3.6vh;
+}
+
+.textfield.login {
+  display: block;
+  width: 14vw;
+  margin: 1px 2.9vw 1.5vh 1vw;
+  float: right;
+  font-size: 2vh;
+}
+
+.textfield.smallertext {
+  font-size: 3vh;
+}
+
+.hint {
+  margin-top: 1.6vh;
+  padding-top: 0.5vh;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 1.7vh;
+  line-height: 2vh;
+}
+
+.hint.loginpage {
+  margin-bottom: 1.6vh;
+  color: gold;
+  line-height: 2.1vh;
+}
+
+.hint.loginpage.forgot {
+  width: 25%;
+  cursor: pointer;
+}
+
+.hint.check {
+  margin-top: 0vh;
+  font-size: 2vh;
+}
+
+.close {
+  display: block;
+  margin-top: 0.6vh;
+  margin-right: 85%;
+  margin-left: 2%;
+  background-color: transparent;
+  color: gold;
+  font-size: 1.7vh;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.close.inclose {
+  display: none;
+}
+
+.subtextfield {
+  display: inline-block;
+  width: 10%;
+  height: 29px;
+  color: #fff;
+  font-size: 21px;
+}
+
+.subtextfield.long {
+  width: 100%;
+  height: 2.9vh;
+  margin-bottom: 0.5vw;
+  font-size: 2.1vh;
+  text-align: center;
+}
+
+.subtextfield.medium {
+  width: 20%;
+  height: 2.9vh;
+  max-height: 2.9vh;
+  font-size: 2.1vh;
+}
+
+.subtextfield.short {
+  width: 7vh;
+  height: 2.9vh;
+  max-height: 2.9vh;
+  margin-left: 8vw;
+  font-size: 2.1vh;
+}
+
+.subfield {
+  display: inline-block;
+  width: 7vw;
+  height: 3.5vh;
+  margin-right: 1.5vw;
+  margin-bottom: 1vh;
+  margin-left: 0px;
+  color: #000;
+  font-size: 2.2vh;
+}
+
+.subfield._2 {
+  margin-left: 0px;
+}
+
+.logintitle {
+  display: block;
+  width: 100%;
+  margin: 2.9vh auto 1vh;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 6vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logintitle.managetitle {
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+}
+
+.loginsection {
+  display: block;
+  width: 40vw;
+  height: 100%;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #000;
+}
+
+.loginsection.manage {
+  padding-top: 15px;
+}
+
+.loginpagefieldname {
+  color: #fff;
+  font-size: 2vh;
+  line-height: 2.1vh;
+}
+
+.loginpagefieldname.small {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  text-align: left;
+}
+
+.loginpagefieldname.small.left {
+  float: left;
+}
+
+.loginpagefieldname.small.right {
+  width: 10%;
+  margin-left: 8vw;
+  padding-left: 0px;
+}
+
+.loginform {
+  margin-top: 2.3vh;
+}
+
+.smalltxtfield {
+  width: 20%;
+  height: 3.5vh;
+  margin-right: 0px;
+  margin-bottom: 2.1vh;
+  float: right;
+  clear: right;
+  color: #000;
+  font-size: 26px;
+}
+
+.smalltxtfield.left {
+  height: 3.5vh;
+  margin-bottom: 2.1vh;
+  float: left;
+  font-size: 2.6vh;
+}
+
+.textfieldlogin {
+  height: 3.5vh;
+  margin-bottom: 1.5vh;
+  color: #000;
+  font-size: 2.6vh;
+}
+
+.createaccountbuttonlink {
+  display: block;
+  text-decoration: none;
+}
+
+.commingsoonheader {
+  display: inline-block;
+  height: 4vh;
+  max-height: 4vh;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  font-family: Bitter, serif;
+  color: gold;
+  font-size: 3.8vh;
+  line-height: 4.4vh;
+}
+
+._1week {
+  display: block;
+  height: auto;
+  margin-top: 32px;
+}
+
+.comingsoonheading {
+  position: fixed;
+  z-index: 1;
+  width: 33.4%;
+  height: 5vh;
+  max-height: 5vh;
+  margin-top: -2px;
+  margin-right: 0px;
+  margin-bottom: 4vh;
+  padding-top: 0px;
+  background-color: gold;
+  font-family: Bitter, serif;
+  color: #000;
+  font-size: 3.8vh;
+  line-height: 4.4vh;
+  text-align: center;
+}
+
+.comingsooncolumn.right {
+  padding-top: 0px;
+  border-color: gold;
+  border-right-style: solid;
+  border-right-width: 5px;
+}
+
+.trailer-image {
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  max-height: 100%;
+}
+
+.description {
+  display: block;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.comingsoondescription {
+  display: block;
+  margin-bottom: 1vh;
+  padding-left: 0.7vh;
+  font-family: Bitter, serif;
+  font-size: 2.2vh;
+  line-height: 2.1vh;
+  text-align: left;
+}
+
+.paragraphdiv {
+  width: 100%;
+  height: 100%;
+}
+
+.comingsooncolumn2 {
+  margin-bottom: 20px;
+  padding-top: 48px;
+  height: 46vh;
+  max-height: 46vh;
+}
+
+.logo {
+  margin-top: 7px;
+  margin-left: 22px;
+}
+
+.logoimage {
+  width: 16.5vw;
+  height: 5.5vh;
+  max-height: 5.5vh;
+  max-width: 16.5vw;
+  margin-top: 0vh;
+  margin-bottom: 1vh;
+}
+
+.movierow {
+  height: 93vh;
+}
+
+.cellphone {
+  display: none;
+  width: 0px;
+  height: 0px;
+  color: #000;
+}
+
+.imageholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.movieposter {
+  position: relative;
+  left: -25%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  overflow: hidden;
+  width: 150%;
+  height: 100%;
+  max-width: 200%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.heroimage {
+  position: absolute;
+  display: block;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
+.heroinfoholder {
+  height: 100%;
+}
+
+.heroheading {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: 60vh;
+  padding-top: 0px;
+  padding-left: 14%;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 6vh;
+}
+
+.heroheadingoverlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
+.herosecondline {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.watchtrailer {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
+.trailerheader {
+  margin-top: 100%;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+}
+
+.tabheading {
+  display: none;
+}
+
+.moviebody {
+  background-color: #000;
+}
+
+.movieholder {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.utility-page-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.utility-page-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 260px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.utility-page-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.summary {
+  width: 100%;
+  height: 50vh;
+  max-height: 50vh;
+  max-width: 100%;
+  margin-top: 3vh;
+  margin-bottom: 7vh;
+  padding-top: 2vh;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .76), rgba(0, 0, 0, .76)), url('../images/hollywood-sign-1598473_1280.jpg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .76), rgba(0, 0, 0, .76)), url('../images/hollywood-sign-1598473_1280.jpg');
+  background-position: 0px 0px, 50% 0px;
+  background-size: auto, cover;
+  background-attachment: scroll, scroll;
+}
+
+.quickinfolist {
+  margin-bottom: 1vh;
+  padding-left: 3vw;
+  list-style-type: none;
+}
+
+.quickinfolistitem {
+  display: block;
+  width: 48vw;
+  height: 8vh;
+  max-height: 8vh;
+  max-width: 48vw;
+  margin-right: auto;
+  margin-bottom: 3vh;
+  margin-left: auto;
+  padding-bottom: 1.5vh;
+  border-bottom: 3px dotted gold;
+  text-align: left;
+}
+
+.quickinfotext {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #fff;
+  font-size: 3.2vh;
+  line-height: 3.6vh;
+}
+
+.trailer-link {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.highlight {
+  color: gold;
+}
+
+.charge {
+  height: 4vh;
+  max-height: 4vh;
+  margin-bottom: 2vh;
+  padding-bottom: 1.4vh;
+  border-bottom: 2px dotted gold;
+  color: #fff;
+  font-size: 3.4vh;
+  text-align: center;
+}
+
+.pay-option {
+  display: inline-block;
+  width: 34%;
+  height: 3vh;
+  max-height: 3vh;
+  margin-top: 2vh;
+  margin-left: 5vw;
+  padding-left: 2.1vw;
+}
+
+.pay-checkmark {
+  height: 2vh;
+}
+
+html.w-mod-js *[data-ix="movieinfopopout"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translate3d(-100vw, 0px, -10000000px);
+  transform: translate3d(-100vw, 0px, -10000000px);
+}
+
+html.w-mod-js *[data-ix="hideinfo"] {
+  display: none;
+}
+
+html.w-mod-js *[data-ix="hide"] {
+  display: none;
+}
+
+html.w-mod-js *[data-ix="showlogin"] {
+  display: none;
+}
+
+html.w-mod-js *[data-ix="show"] {
+  display: none;
+}
+
+html.w-mod-js *[data-ix="showinfotablet"] {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .homellinktext {
+    display: none;
+  }
+  .homenavselection {
+    height: 67vh;
+  }
+  .slider {
+    height: 60vh;
+  }
+  .slider.movieslider {
+    height: 57vh;
+  }
+  .movieslide._5example.linkex {
+    width: 50%;
+  }
+  .movieinfo {
+    display: block;
+    width: 0%;
+    height: 0%;
+    padding-top: 0%;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .heroarrow {
+    width: 5vw;
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  }
+  .heroarrow.hero {
+    display: none;
+  }
+  .info {
+    width: 46vw;
+    height: 55vh;
+    cursor: pointer;
+  }
+  .movieoptions {
+    height: auto;
+  }
+  .infocolumn {
+    display: block;
+    height: 55vh;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    cursor: default;
+  }
+  .tomoviecolumn {
+    height: 55vh;
+    background-color: gold;
+  }
+  .trailercolumn {
+    height: 55vh;
+  }
+  .tomovielink {
+    width: 66%;
+  }
+  .trailers {
+    overflow: hidden;
+    width: 46vw;
+    height: 55vh;
+    cursor: pointer;
+  }
+  .tomovie {
+    position: absolute;
+    width: 46vw;
+    height: 55vh;
+    margin-right: 0px;
+    cursor: pointer;
+  }
+  .addoverlay.infosectionheading {
+    z-index: -1;
+    display: none;
+    overflow: hidden;
+    width: 0%;
+    height: 0%;
+    padding-top: 0vh;
+    padding-left: 0vh;
+  }
+  .addoverlay.trailersectionheading {
+    z-index: -1;
+    display: none;
+    overflow: hidden;
+    width: 0%;
+    height: 0%;
+    padding-top: 0vh;
+    padding-left: 0vh;
+  }
+  .addoverlay.tomovieheading {
+    z-index: -2;
+    width: 0%;
+    height: 0%;
+  }
+  .infoheading {
+    left: 226px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+    width: 374px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+  .trailerheading {
+    position: absolute;
+    left: -347px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+  }
+  .tomovieheading {
+    display: none;
+    margin-right: auto;
+    padding-top: 11px;
+    padding-right: 48px;
+  }
+  .movieinfoexpansion {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .previewsexpansion {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 50vh;
+  }
+  .closebutton {
+    position: static;
+    display: none;
+    width: 0px;
+    height: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    color: #000;
+  }
+  .playbutton {
+    display: inline-block;
+    width: 143px;
+    height: 80px;
+  }
+  .movie-title {
+    display: none;
+    margin-left: 54px;
+  }
+  .quickloginoption {
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 200%;
+    margin-top: 1%;
+  }
+  .quicklogin {
+    height: 80%;
+  }
+
+  .textfield.login {
+    width: 41vw;
+  }
+  .close {
+    display: block;
+    padding-left: 16px;
+  }
+  .close.inclose {
+    display: block;
+  }
+  .subfield {
+    width: 16vw;
+    margin-right: 9.5vw;
+  }
+  .loginsection {
+    width: 80vw;
+  }
+  .commingsoonheader {
+    margin-left: -38px;
+    padding-bottom: 0px;
+  }
+  .comingsooncolumn {
+    position: relative;
+  }
+  .trailer-image {
+    display: block;
+    width: 200%;
+    max-width: 200%;
+  }
+  .description {
+    position: static;
+    display: none;
+  }
+  .comingsoonrow {
+    display: block;
+  }
+  .comingsoondescription {
+    display: none;
+    padding-top: 193px;
+    padding-left: 0px;
+    clear: none;
+  }
+  .comingsooncolumn2 {
+    padding-top: 100px;
+    height: 100%;
+    max-height: 100%;
+  }
+  .logoimage {
+    display: block;
+    width: 25.5vw;
+    margin-left: 0px;
+  }
+  .menubuttonn {
+    height: 7.4vh;
+    margin-bottom: 0px;
+    padding-bottom: 19px;
+    background-color: #000;
+  }
+  .menubuttonn.w--open {
+    background-color: #fff;
+    color: gold;
+  }
+  .menuicon {
+    padding-top: 6px;
+    color: gold;
+  }
+  .dropdown {
+    background-color: #000;
+  }
+  .movierow {
+    position: static;
+    display: block;
+    height: auto;
+  }
+  .movieposter {
+    left: 0%;
+    width: 100%;
+    height: 56vh;
+  }
+  .heroheading {
+    margin-top: 40vh;
+  }
+  .tabheading {
+    display: block;
+    margin-top: 25vh;
+    margin-left: 60vw;
+    font-family: Bitter, serif;
+    color: #fff;
+    font-size: 3.8vh;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .tabheading.movie {
+    color: #000;
+  }
+}
+
+@media (max-width: 767px) {
+  .navlink._1 {
+    display: none;
+  }
+  .navlink._1.w--current {
+    display: none;
+  }
+  .homenavselection {
+    display: block;
+    height: 52vh;
+    margin-top: 4vh;
+  }
+  .slider {
+    display: none;
+  }
+  .slider.movieslider {
+    width: 100%;
+    height: 43vh;
+  }
+  .sectionheading {
+    display: block;
+    font-size: 4vh;
+  }
+  .info {
+    width: 50vw;
+    height: 43vh;
+  }
+  .movieoptions {
+    display: block;
+  }
+  .infocolumn {
+    height: 43vh;
+  }
+  .tomoviecolumn {
+    height: 43vh;
+  }
+  .trailercolumn {
+    height: 43vh;
+  }
+  .trailers {
+    width: 50vw;
+    height: 43vh;
+  }
+  .tomovie {
+    width: 50vw;
+    height: 43vh;
+  }
+  .addoverlay.infosectionheading {
+    display: none;
+  }
+  .movieinfoexpansion {
+    display: none;
+  }
+  .movieinfotext p {
+    font-size: 2vh;
+  }
+  .quickloginoption {
+    display: block;
+  }
+  .field {
+    height: 3.5vh;
+    padding-top: 0.5vh;
+    font-size: 3vh;
+  }
+  .field.card {
+    height: 4vh;
+    padding-top: 1vh;
+    font-size: 3vh;
+  }
+  .submitbutton {
+    height: 4.5vh;
+    font-size: 2.8vh;
+  }
+  .textfield {
+    height: 2.5vh;
+    font-size: 2.6vh;
+  }
+  .textfield.login {
+    width: 31vw;
+    margin-right: 7.9vw;
+    font-size: 2.5vh;
+  }
+  .textfield.smallertext {
+    height: 2.5vh;
+    font-size: 2vh;
+  }
+  .hint.loginpage.forgot {
+    width: 45%;
+  }
+  .hint._4 {
+    display: none;
+  }
+  .close {
+    width: 20vw;
+    font-size: 1.7vh;
+  }
+  .close.inclose {
+    font-size: 1.5vh;
+  }
+  .subtextfield.medium {
+    width: 23%;
+    height: 2.9vh;
+  }
+  .subtextfield.short {
+    width: 10vw;
+    height: 2.9vh;
+  }
+  .subfield {
+    margin-right: 6.5vw;
+    font-size: 1.6vh;
+  }
+  .logintitle {
+    display: none;
+  }
+  .loginsection {
+    display: block;
+    margin-top: 4.2vh;
+  }
+  .smalltxtfield.left {
+    font-size: 1.6vh;
+  }
+  .commingsoonheader {
+    display: none;
+  }
+  ._1week {
+    display: block;
+  }
+  .trailer-image {
+    width: 100%;
+  }
+  .logoimage {
+    width: 40.5vw;
+  }
+  .menubuttonn {
+    display: block;
+  }
+  .menuicon {
+    display: block;
+  }
+  .cellphone {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 333px;
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+  }
+  .movieposter {
+    height: 43vh;
+  }
+  .tabheading {
+    margin-top: 19vh;
+  }
+  .icon {
+    font-size: 2.5vh;
+  }
+}
+
+@media (max-width: 479px) {
+  .navlink {
+    display: block;
+  }
+  .navlink._1 {
+    display: none;
+  }
+  .homenavselection {
+    display: block;
+    height: 56vh;
+    margin-top: 3vh;
+  }
+  .slider {
+    display: none;
+    height: 45vh;
+  }
+  .slider.movieslider {
+    height: 48vh;
+    margin-top: 1vh;
+  }
+  .newsslideheading {
+    margin-top: 505px;
+    margin-left: 58px;
+  }
+  .movieslide._5example.linkex {
+    width: 100%;
+  }
+  .sectionheading {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 3vh;
+    text-align: left;
+  }
+  .bottomnav {
+    display: block;
+  }
+  .heroarrow {
+    width: 7vw;
+  }
+  .info {
+    display: none;
+    height: auto;
+  }
+  .infocolumn {
+    height: 27vh;
+  }
+  .tomoviecolumn {
+    height: 27vh;
+    background-color: #000;
+  }
+  .trailercolumn {
+    height: 27vh;
+  }
+  .trailers {
+    display: none;
+  }
+  .tomovie {
+    display: none;
+  }
+  .movieinfoexpansion {
+    display: none;
+  }
+  .movieinfotext h2 {
+    font-size: 2vh;
+  }
+  .movieinfotext p {
+    font-size: 1.5vh;
+  }
+  .title {
+    font-size: 3vh;
+  }
+  .quickloginoption {
+    display: none;
+    height: 100vh;
+  }
+  .field.card {
+    margin-bottom: 0.8999999999999999vh;
+    padding-top: 0vh;
+    font-size: 2vh;
+    line-height: 3vh;
+  }
+  .submitbutton {
+    font-size: 1.5vh;
+  }
+  .textfield {
+    margin-top: 0px;
+    padding-top: 1.8vh;
+  }
+  .textfield.login {
+    width: 27vw;
+    font-size: 1.5vh;
+  }
+  .textfield.smallertext {
+    font-size: 2vh;
+  }
+  .hint.loginpage {
+    font-size: 1.3vh;
+  }
+  .close {
+    width: 25vw;
+  }
+  .subtextfield.long {
+    font-size: 2vh;
+  }
+  .subtextfield.medium {
+    font-size: 2vh;
+  }
+  .subtextfield.short {
+    margin-left: 0vw;
+    font-size: 2vh;
+  }
+  .subfield {
+    width: 17vw;
+    font-size: 1vh;
+  }
+  .subfield._2 {
+    display: inline-block;
+    width: 15vw;
+    margin-left: 11px;
+    font-size: 1vh;
+  }
+  .loginpagefieldname {
+    font-size: 1.7vh;
+  }
+  .loginpagefieldname.small.right {
+    position: static;
+    margin-left: 3vw;
+    float: left;
+    clear: none;
+  }
+  .smalltxtfield {
+    width: 21%;
+    margin-right: 13px;
+  }
+  .smalltxtfield.left {
+    margin-left: 0px;
+    font-size: 1vh;
+  }
+  .comingsoonheading {
+    display: none;
+  }
+  .logoimage {
+    width: 63.5vw;
+  }
+  .menubuttonn {
+    display: block;
+  }
+  .menuicon {
+    display: block;
+  }
+  .dropdown {
+    display: block;
+  }
+  .cellphone {
+    text-align: left;
+  }
+  .movieposter {
+    height: 100%;
+  }
+  .heroheading {
+    margin-top: 28vh;
+    font-size: 4vh;
+  }
+  .heroheadingoverlay {
+    display: block;
+  }
+  .tabheading {
+    display: block;
+    margin-top: 10vh;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .tabheading.movie {
+    margin-top: 10vh;
+    color: #fff;
+  }
+  .icon {
+    font-size: 2.5vh;
+  }
+}
+
+.stripeholder{
+  margin: auto;
+}
+
+.stripeform{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.space{
+  margin-bottom: 6%;
+}
